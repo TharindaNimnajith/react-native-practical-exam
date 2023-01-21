@@ -57,6 +57,7 @@ const BottomTab = createBottomTabNavigator<RootTabParamList>();
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
+  // noinspection JSUnusedGlobalSymbols
   return (
     <BottomTab.Navigator
       initialRouteName="TabOne"
