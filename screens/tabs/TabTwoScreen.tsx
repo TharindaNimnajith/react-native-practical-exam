@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 import {Text, View} from '../../components/Themed';
-import {RootTabScreenProps} from "../../types";
+import {RootTabScreenProps} from '../../types';
 
 // noinspection JSUnusedLocalSymbols
 export default function TabTwoScreen({navigation}: RootTabScreenProps<'TabTwo'>) {

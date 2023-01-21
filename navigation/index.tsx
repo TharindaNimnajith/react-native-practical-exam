@@ -1,5 +1,5 @@
 /**
- * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
+ * If you are not familiar with React Navigation, refer to the 'Fundamentals' guide:
  * https://reactnavigation.org/docs/getting-started
  *
  */
@@ -12,12 +12,11 @@ import {ColorSchemeName} from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import ModalScreen from '../screens/modals/ModalScreen';
 import NotFoundScreen from '../screens/shared/NotFoundScreen';
 import TabOneScreen from '../screens/tabs/TabOneScreen';
 import TabTwoScreen from '../screens/tabs/TabTwoScreen';
 import TabThreeScreen from '../screens/tabs/TabThreeScreen';
-import LoginScreen from "../screens/login/LoginScreen";
+import LoginScreen from '../screens/auth/LoginScreen';
 import {RootStackParamList, RootTabParamList} from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -40,12 +39,9 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{headerShown: false}}/>
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{title: 'Oops!'}}/>
-      <Stack.Group screenOptions={{presentation: 'modal'}}>
-        <Stack.Screen name="Modal" component={ModalScreen}/>
-      </Stack.Group>
+      <Stack.Screen name='Login' component={LoginScreen} options={{headerShown: false}}/>
+      <Stack.Screen name='Root' component={BottomTabNavigator} options={{headerShown: false}}/>
+      <Stack.Screen name='NotFound' component={NotFoundScreen} options={{title: 'Oops!'}}/>
     </Stack.Navigator>
   );
 }
@@ -62,32 +58,35 @@ function BottomTabNavigator() {
   // noinspection JSUnusedGlobalSymbols
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName='TabOne'
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="TabOne"
+        name='TabOne'
         component={TabOneScreen}
         options={{
+          title: 'Home',
           headerShown: false,
-          tabBarIcon: ({color}) => <TabBarIcon name="home" color={color}/>,
+          tabBarIcon: ({color}) => <TabBarIcon name='home' color={color}/>,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name='TabTwo'
         component={TabTwoScreen}
         options={{
+          title: 'Explore',
           headerShown: false,
-          tabBarIcon: ({color}) => <TabBarIcon name="search" color={color}/>,
+          tabBarIcon: ({color}) => <TabBarIcon name='search' color={color}/>,
         }}
       />
       <BottomTab.Screen
-        name="TabThree"
+        name='TabThree'
         component={TabThreeScreen}
         options={{
+          title: 'Your Library',
           headerShown: false,
-          tabBarIcon: ({color}) => <TabBarIcon name="book" color={color}/>,
+          tabBarIcon: ({color}) => <TabBarIcon name='book' color={color}/>,
         }}
       />
     </BottomTab.Navigator>
