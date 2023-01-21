@@ -1,7 +1,8 @@
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Text, View} from '../../components/Themed';
 import {RootStackScreenProps} from '../../types';
+import Colors from '../../constants/Colors';
 
 export default function LoginScreen({navigation}: RootStackScreenProps<'Login'>) {
   const onLogin = () => {
@@ -10,9 +11,11 @@ export default function LoginScreen({navigation}: RootStackScreenProps<'Login'>)
 
   return (
     <View style={styles.container}>
-      <Text style={styles.description}>Login</Text>
+      <View style={styles.logoView}>
+        <Image source={require('../../assets/images/practical_test_logo.png')} style={styles.logo}/>
+      </View>
       <TouchableOpacity onPress={onLogin} style={styles.link}>
-        <Text style={styles.linkText}>Login</Text>
+        <Text style={styles.linkText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
   );
@@ -21,6 +24,7 @@ export default function LoginScreen({navigation}: RootStackScreenProps<'Login'>)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
     marginHorizontal: 20,
     marginTop: 30,
   },
@@ -29,10 +33,23 @@ const styles = StyleSheet.create({
   },
   link: {
     marginTop: 15,
-    paddingVertical: 15,
+    paddingVertical: 10,
+    alignItems: 'center',
+    paddingHorizontal: 15,
+    border: 'solid',
+    borderRadius: 18,
+    backgroundColor: Colors.brandColor.color,
   },
   linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
+    fontSize: 18,
+    color: 'white',
+    fontWeight: 'bold',
   },
+  logo: {
+    width: 200,
+    height: 200,
+  },
+  logoView: {
+    alignItems: 'center',
+  }
 });

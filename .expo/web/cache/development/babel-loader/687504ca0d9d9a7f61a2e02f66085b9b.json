@@ -1,0 +1,42 @@
+{
+  "ast": null,
+  "code": "import Image from \"react-native-web/dist/exports/Image\";\nimport StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport { View } from \"../../components/Themed\";\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nexport default function LoginScreen(_ref) {\n  var navigation = _ref.navigation;\n  var onLogin = function onLogin() {\n    navigation.replace('Root');\n  };\n  return _jsx(View, {\n    style: styles.container,\n    children: _jsx(Image, {\n      source: require(\"../../assets/images/practical_test_logo.png\"),\n      style: styles.logo\n    })\n  });\n}\nvar styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    marginHorizontal: 20,\n    marginTop: 30\n  },\n  description: {\n    fontSize: 20\n  },\n  link: {\n    marginTop: 15,\n    paddingVertical: 15\n  },\n  linkText: {\n    fontSize: 14,\n    color: '#2e78b7'\n  },\n  logo: {\n    width: 150,\n    height: 150,\n    textAlign: 'center'\n  }\n});",
+  "map": {
+    "version": 3,
+    "names": [
+      "View",
+      "LoginScreen",
+      "navigation",
+      "onLogin",
+      "replace",
+      "styles",
+      "container",
+      "require",
+      "logo",
+      "StyleSheet",
+      "create",
+      "flex",
+      "justifyContent",
+      "marginHorizontal",
+      "marginTop",
+      "description",
+      "fontSize",
+      "link",
+      "paddingVertical",
+      "linkText",
+      "color",
+      "width",
+      "height",
+      "textAlign"
+    ],
+    "sources": [
+      "D:/react-native-practical-exam/screens/auth/LoginScreen.tsx"
+    ],
+    "sourcesContent": [
+      "import {Image, StyleSheet, TouchableOpacity} from 'react-native';\r\n\r\nimport {Text, View} from '../../components/Themed';\r\nimport {RootStackScreenProps} from '../../types';\r\n\r\nexport default function LoginScreen({navigation}: RootStackScreenProps<'Login'>) {\r\n  const onLogin = () => {\r\n    navigation.replace('Root');\r\n  }\r\n\r\n  return (\r\n    <View style={styles.container}>\r\n      <Image source={require('../../assets/images/practical_test_logo.png')} style={styles.logo}/>\r\n    </View>\r\n  );\r\n}\r\n\r\nconst styles = StyleSheet.create({\r\n  container: {\r\n    flex: 1,\r\n    justifyContent: 'center',\r\n    marginHorizontal: 20,\r\n    marginTop: 30,\r\n  },\r\n  description: {\r\n    fontSize: 20,\r\n  },\r\n  link: {\r\n    marginTop: 15,\r\n    paddingVertical: 15,\r\n  },\r\n  linkText: {\r\n    fontSize: 14,\r\n    color: '#2e78b7',\r\n  },\r\n  logo: {\r\n    width: 150,\r\n    height: 150,\r\n    textAlign: 'center'\r\n  },\r\n});\r\n"
+    ],
+    "mappings": ";;AAEA,SAAcA,IAAI;AAAiC;AAGnD,eAAe,SAASC,WAAW,OAA8C;EAAA,IAA5CC,UAAU,QAAVA,UAAU;EAC7C,IAAMC,OAAO,GAAG,SAAVA,OAAO,GAAS;IACpBD,UAAU,CAACE,OAAO,CAAC,MAAM,CAAC;EAC5B,CAAC;EAED,OACE,KAAC,IAAI;IAAC,KAAK,EAAEC,MAAM,CAACC,SAAU;IAAA,UAC5B,KAAC,KAAK;MAAC,MAAM,EAAEC,OAAO,+CAAgD;MAAC,KAAK,EAAEF,MAAM,CAACG;IAAK;EAAE,EACvF;AAEX;AAEA,IAAMH,MAAM,GAAGI,UAAU,CAACC,MAAM,CAAC;EAC/BJ,SAAS,EAAE;IACTK,IAAI,EAAE,CAAC;IACPC,cAAc,EAAE,QAAQ;IACxBC,gBAAgB,EAAE,EAAE;IACpBC,SAAS,EAAE;EACb,CAAC;EACDC,WAAW,EAAE;IACXC,QAAQ,EAAE;EACZ,CAAC;EACDC,IAAI,EAAE;IACJH,SAAS,EAAE,EAAE;IACbI,eAAe,EAAE;EACnB,CAAC;EACDC,QAAQ,EAAE;IACRH,QAAQ,EAAE,EAAE;IACZI,KAAK,EAAE;EACT,CAAC;EACDZ,IAAI,EAAE;IACJa,KAAK,EAAE,GAAG;IACVC,MAAM,EAAE,GAAG;IACXC,SAAS,EAAE;EACb;AACF,CAAC,CAAC"
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
