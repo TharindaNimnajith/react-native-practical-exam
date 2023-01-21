@@ -1,0 +1,32 @@
+{
+  "ast": null,
+  "code": "import StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport { Text, View } from \"../../components/Themed\";\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nexport default function TabTwoScreen(_ref) {\n  var navigation = _ref.navigation;\n  return _jsx(View, {\n    style: styles.container,\n    children: _jsx(Text, {\n      style: styles.title,\n      children: \"Explore\"\n    })\n  });\n}\nvar styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    alignItems: 'center',\n    justifyContent: 'center'\n  },\n  title: {\n    fontSize: 20,\n    fontWeight: 'bold'\n  }\n});",
+  "map": {
+    "version": 3,
+    "names": [
+      "Text",
+      "View",
+      "TabTwoScreen",
+      "navigation",
+      "styles",
+      "container",
+      "title",
+      "StyleSheet",
+      "create",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "fontSize",
+      "fontWeight"
+    ],
+    "sources": [
+      "D:/react-native-practical-exam/screens/tabs/TabTwoScreen.tsx"
+    ],
+    "sourcesContent": [
+      "import {StyleSheet} from 'react-native';\n\nimport {Text, View} from '../../components/Themed';\nimport {RootTabScreenProps} from \"../../types\";\n\n// noinspection JSUnusedLocalSymbols\nexport default function TabTwoScreen({navigation}: RootTabScreenProps<'TabTwo'>) {\n  return (\n    <View style={styles.container}>\n      <Text style={styles.title}>Explore</Text>\n    </View>\n  );\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    alignItems: 'center',\n    justifyContent: 'center',\n  },\n  title: {\n    fontSize: 20,\n    fontWeight: 'bold',\n  },\n});\n"
+    ],
+    "mappings": ";AAEA,SAAQA,IAAI,EAAEC,IAAI;AAAiC;AAInD,eAAe,SAASC,YAAY,OAA6C;EAAA,IAA3CC,UAAU,QAAVA,UAAU;EAC9C,OACE,KAAC,IAAI;IAAC,KAAK,EAAEC,MAAM,CAACC,SAAU;IAAA,UAC5B,KAAC,IAAI;MAAC,KAAK,EAAED,MAAM,CAACE,KAAM;MAAA,UAAC;IAAO;EAAO,EACpC;AAEX;AAEA,IAAMF,MAAM,GAAGG,UAAU,CAACC,MAAM,CAAC;EAC/BH,SAAS,EAAE;IACTI,IAAI,EAAE,CAAC;IACPC,UAAU,EAAE,QAAQ;IACpBC,cAAc,EAAE;EAClB,CAAC;EACDL,KAAK,EAAE;IACLM,QAAQ,EAAE,EAAE;IACZC,UAAU,EAAE;EACd;AACF,CAAC,CAAC"
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

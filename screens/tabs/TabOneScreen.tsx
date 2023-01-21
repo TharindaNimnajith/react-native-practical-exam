@@ -1,7 +1,8 @@
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {Pressable, StyleSheet} from 'react-native';
 
-import {Text, View} from '../components/Themed';
-import {RootTabScreenProps} from '../types';
+import {Text, View} from '../../components/Themed';
+import {RootTabScreenProps} from '../../types';
+import * as React from "react";
 
 export default function TabOneScreen({navigation}: RootTabScreenProps<'TabOne'>) {
   const onLogout = () => {
@@ -12,8 +13,9 @@ export default function TabOneScreen({navigation}: RootTabScreenProps<'TabOne'>)
     <View style={styles.container}>
       <View style={styles.row}>
         <Text style={styles.title}>Good Afternoon</Text>
-        <TouchableOpacity onPress={onLogout} style={styles.profile}/>
+        <Pressable onPress={onLogout} style={styles.profile}/>
       </View>
+
       <Text style={styles.description}>Recently Played</Text>
       <View>
         <Text style={styles.description}>Main Song</Text>
@@ -45,8 +47,9 @@ const styles = StyleSheet.create({
   profile: {
     width: 55,
     height: 55,
-    backgroundColor: 'red',
     marginLeft: 25,
     borderRadius: 25,
+    opacity: 0.5,
+    backgroundColor: 'grey',
   },
 });

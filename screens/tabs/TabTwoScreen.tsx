@@ -1,13 +1,13 @@
 import {StyleSheet} from 'react-native';
 
-import {Text, View} from '../components/Themed';
-import {RootTabScreenProps} from "../types";
+import {Text, View} from '../../components/Themed';
+import {RootTabScreenProps} from "../../types";
 
 // noinspection JSUnusedLocalSymbols
-export default function TabThreeScreen({navigation}: RootTabScreenProps<'TabThree'>) {
+export default function TabTwoScreen({navigation}: RootTabScreenProps<'TabTwo'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Your Library</Text>
+      <Text style={styles.title}>Explore</Text>
     </View>
   );
 }
