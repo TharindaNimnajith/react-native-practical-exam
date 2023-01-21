@@ -2,6 +2,33 @@
   "name": "react-native-practical-exam",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "description": "react native practical exam",
+  "keywords": [
+    "expo",
+    "react-native",
+    "android",
+    "ios"
+  ],
+  "private": true,
+  "author": "Tharinda Nimnajith Rajapaksha",
+  "repository": {
+    "url": "https://github.com/TharindaNimnajith/react-native-practical-exam.git",
+    "type": "git"
+  },
+  "contributors": [
+    {
+      "email": "tharindarajapakshe@y7mail.com",
+      "name": "Tharinda Nimnajith Rajapaksha",
+      "url": "https://github.com/TharindaNimnajith"
+    }
+  ],
+  "maintainers": [
+    {
+      "email": "tharindarajapakshe@y7mail.com",
+      "name": "Tharinda Nimnajith Rajapaksha",
+      "url": "https://github.com/TharindaNimnajith"
+    }
+  ],
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -42,6 +69,5 @@
     "jest-expo": "~47.0.1",
     "react-test-renderer": "18.1.0",
     "typescript": "^4.6.3"
-  },
-  "private": true
+  }
 }
