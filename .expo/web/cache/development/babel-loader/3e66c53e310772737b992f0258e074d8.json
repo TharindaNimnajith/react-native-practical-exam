@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "import StyleSheet from \"react-native-web/dist/exports/StyleSheet\";\nimport { Text, View } from \"../components/Themed\";\nimport { jsx as _jsx } from \"react/jsx-runtime\";\nimport { jsxs as _jsxs } from \"react/jsx-runtime\";\nexport default function TabOneScreen(_ref) {\n  var navigation = _ref.navigation;\n  return _jsxs(View, {\n    style: styles.container,\n    children: [_jsx(Text, {\n      style: styles.title,\n      children: \"Good Afternoon\"\n    }), _jsx(Text, {\n      style: styles.description,\n      children: \"Recently Played\"\n    })]\n  });\n}\nvar styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    alignItems: 'center',\n    justifyContent: 'center'\n  },\n  title: {\n    fontSize: 20,\n    fontWeight: 'bold'\n  },\n  description: {\n    fontSize: 16\n  }\n});",
+  "map": {
+    "version": 3,
+    "names": [
+      "Text",
+      "View",
+      "TabOneScreen",
+      "navigation",
+      "styles",
+      "container",
+      "title",
+      "description",
+      "StyleSheet",
+      "create",
+      "flex",
+      "alignItems",
+      "justifyContent",
+      "fontSize",
+      "fontWeight"
+    ],
+    "sources": [
+      "D:/react-native-practical-exam/screens/TabOneScreen.tsx"
+    ],
+    "sourcesContent": [
+      "import {StyleSheet} from 'react-native';\r\n\r\nimport {Text, View} from '../components/Themed';\r\nimport {RootTabScreenProps} from '../types';\r\n\r\n// noinspection JSUnusedLocalSymbols\r\nexport default function TabOneScreen({navigation}: RootTabScreenProps<'TabOne'>) {\r\n  return (\r\n    <View style={styles.container}>\r\n      <Text style={styles.title}>Good Afternoon</Text>\r\n      <Text style={styles.description}>Recently Played</Text>\r\n    </View>\r\n  );\r\n}\r\n\r\nconst styles = StyleSheet.create({\r\n  container: {\r\n    flex: 1,\r\n    alignItems: 'center',\r\n    justifyContent: 'center',\r\n  },\r\n  title: {\r\n    fontSize: 20,\r\n    fontWeight: 'bold',\r\n  },\r\n  description: {\r\n    fontSize: 16,\r\n  },\r\n});\r\n"
+    ],
+    "mappings": ";AAEA,SAAQA,IAAI,EAAEC,IAAI;AAA8B;AAAA;AAIhD,eAAe,SAASC,YAAY,OAA6C;EAAA,IAA3CC,UAAU,QAAVA,UAAU;EAC9C,OACE,MAAC,IAAI;IAAC,KAAK,EAAEC,MAAM,CAACC,SAAU;IAAA,WAC5B,KAAC,IAAI;MAAC,KAAK,EAAED,MAAM,CAACE,KAAM;MAAA,UAAC;IAAc,EAAO,EAChD,KAAC,IAAI;MAAC,KAAK,EAAEF,MAAM,CAACG,WAAY;MAAA,UAAC;IAAe,EAAO;EAAA,EAClD;AAEX;AAEA,IAAMH,MAAM,GAAGI,UAAU,CAACC,MAAM,CAAC;EAC/BJ,SAAS,EAAE;IACTK,IAAI,EAAE,CAAC;IACPC,UAAU,EAAE,QAAQ;IACpBC,cAAc,EAAE;EAClB,CAAC;EACDN,KAAK,EAAE;IACLO,QAAQ,EAAE,EAAE;IACZC,UAAU,EAAE;EACd,CAAC;EACDP,WAAW,EAAE;IACXM,QAAQ,EAAE;EACZ;AACF,CAAC,CAAC"
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,16 +1,26 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import {Text, View} from '../components/Themed';
 import {RootTabScreenProps} from '../types';
 
-// noinspection JSUnusedLocalSymbols
 export default function TabOneScreen({navigation}: RootTabScreenProps<'TabOne'>) {
+  const onLogout = () => {
+    navigation.replace('Login');
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"/>
-      <EditScreenInfo path="/screens/TabOneScreen.tsx"/>
+      <View style={styles.row}>
+        <Text style={styles.title}>Good Afternoon</Text>
+        <TouchableOpacity onPress={onLogout} style={styles.profile}/>
+      </View>
+      <Text style={styles.description}>Recently Played</Text>
+      <View>
+        <Text style={styles.description}>Main Song</Text>
+      </View>
+      <View>
+        <Text style={styles.description}>Song List</Text>
+      </View>
     </View>
   );
 }
@@ -18,16 +28,25 @@ export default function TabOneScreen({navigation}: RootTabScreenProps<'TabOne'>)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginHorizontal: 20,
+    marginTop: 30,
   },
   title: {
-    fontSize: 20,
+    fontSize: 36,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  description: {
+    fontSize: 20,
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  profile: {
+    width: 55,
+    height: 55,
+    backgroundColor: 'red',
+    marginLeft: 25,
+    borderRadius: 25,
   },
 });
