@@ -16,4 +16,19 @@ export default {
     tabIconDefault: '#ccc',
     tabIconSelected: tintColorDark,
   },
+  brandColor: {
+    color: '#fbbc05',
+  },
+  backgroundColor: {
+    color: '#111111',
+  },
+  buttonColor: {
+    color: '#1f313f',
+  },
+  textInputBackgroundColor: {
+    color: '#3a3c3f',
+  },
+  labelColor: {
+    color: '#9ca3af',
+  },
 };
